@@ -12,13 +12,13 @@ const reviews = [
 		personName: "Tanya Sinclair",
 		profession: "UX Engineer",
 		comment: `"I've been interested in coding for a while but never taken the jump, until now. I couldn't recommend this course enough. I'm now in the job of my dreams and so excited about the future."`,
-		imageSource: "../images/image-tanya.jpg",
+		imageSource: "images/image-tanya.jpg",
 	},
 	{
 		personName: "John Tarkpor",
 		profession: "Junior Front-End Developer",
 		comment: `"If you want to lay the best foundation possible I'd recommend taking this course. The depth the instructors go into is incredible. I now feel so confident about starting up as a professional developer."`,
-		imageSource: "../images/image-john.jpg",
+		imageSource: "images/image-john.jpg",
 	},
 ];
 

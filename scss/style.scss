@@ -1,0 +1,285 @@
+@import "variables";
+@import "attribution";
+
+:root {
+	font-size: 32px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Inter", sans-serif;
+	color: var(--dark-blue);
+	background-image: url(../images/pattern-curve.svg);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	height: 100vh;
+}
+
+a {
+	text-decoration: none;
+	color: var(--dark-blue);
+}
+
+.container {
+	padding: 0 6% 0 12%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+main {
+	height: 95vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.section-desc {
+	z-index: 3;
+	width: 100%;
+
+	&__img {
+		margin-left: 2.9rem;
+		margin-bottom: -2.3rem;
+		width: 3.75rem;
+		height: 3.125rem;
+	}
+
+	&__comment {
+		font-size: 1rem;
+		line-height: 1.375rem;
+		font-weight: 300;
+	}
+}
+
+#person {
+	width: 75%;
+	margin-top: 1rem;
+	font-size: 0.625rem;
+	font-weight: 700;
+	color: var(--dark-blue);
+}
+
+#person span {
+	display: inline-block;
+	font-weight: 500;
+	color: var(--gray-blue);
+}
+
+.background-picture {
+	background-image: url(../images/pattern-bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 130%;
+	height: 130%;
+	position: absolute;
+	z-index: -2;
+	left: -15%;
+	top: -15%;
+}
+
+.section-photo {
+	margin: 0 auto;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin-left: -15%;
+
+	transition: all 300ms ease-in-out;
+
+	position: relative;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: relative;
+		width: 75%;
+	}
+
+	&__img {
+		border-radius: 0.313rem;
+	}
+
+	&__img-background {
+		position: absolute;
+		border-radius: 0.313rem;
+		z-index: -1;
+		width: 100%;
+		box-shadow: 0px 1.25rem 1.563rem -0.938rem rgba(36, 36, 113, 0.495001);
+	}
+
+	&__buttons {
+		position: absolute;
+		bottom: 0;
+		background-color: var(--white);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		border-radius: 1.75rem;
+		width: 3.5rem;
+		height: 1.75rem;
+
+		margin-left: 1.75rem;
+		margin-bottom: -0.875rem;
+
+		box-shadow: 0px 0.5rem 0.625rem -0.313rem rgba(36, 36, 113, 0.0991313);
+	}
+
+	&__buttons button {
+		margin: 0;
+		padding: 0;
+		width: 1.75rem;
+		height: 1.75rem;
+		border-radius: 1.75rem;
+		border: none;
+		background-color: var(--white);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		cursor: pointer;
+
+		outline: none;
+	}
+
+	&__buttons button:hover {
+		background-color: var(--light-violet);
+		transition: background-color 50ms ease-in-out;
+	}
+
+	&__buttons button:active {
+		background-color: var(--dark-violet);
+		transition: background-color 50ms ease-in-out;
+	}
+
+	&__buttons button:active svg path {
+		stroke: var(--white);
+		transition: all 50ms ease-in-out;
+	}
+
+	&__previous-img {
+		margin-left: -0.063rem;
+	}
+
+	&__next-img {
+		margin-right: -0.063rem;
+	}
+}
+
+footer {
+	height: 5vh;
+}
+
+@media (max-width: 1080px) {
+	body {
+		font-size: 0.8rem;
+	}
+
+	.container {
+		padding: 0 3% 0 6%;
+	}
+}
+
+@media (max-width: 760px) {
+	.container {
+		padding: 0;
+		margin: 5vh 0 0;
+	}
+
+	main {
+		flex-direction: column;
+	}
+
+	.section-desc {
+		z-index: 3;
+		width: 80%;
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 50%;
+		margin-top: 5vh;
+
+		&__img {
+			margin-left: 0;
+			margin-right: 0;
+
+			margin-bottom: -1.5rem;
+			width: 1.875rem;
+			height: 1.563rem;
+		}
+
+		&__comment {
+			font-size: 0.563rem;
+			line-height: 0.75rem;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+
+	#person {
+		width: 100%;
+		margin-top: 0;
+		font-size: 0.469rem;
+		font-weight: 700;
+		text-align: center;
+	}
+
+	#person span {
+		display: block;
+	}
+
+	.section-photo {
+		order: 1;
+		margin: 0 auto;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center center;
+		width: 85%;
+		height: 50%;
+
+		&__container {
+			width: 80%;
+		}
+
+		&__buttons {
+			border-radius: 1.25rem;
+			width: 2.5rem;
+			height: 1.25rem;
+
+			margin-left: auto;
+			margin-right: auto;
+
+			right: 0px;
+			left: 0px;
+
+			margin-bottom: -0.625rem;
+		}
+
+		&__buttons button {
+			width: 1.25rem;
+			height: 1.25rem;
+			border-radius: 1.25rem;
+		}
+
+		&__buttons button svg {
+			transform: scale(0.7);
+		}
+	}
+}
